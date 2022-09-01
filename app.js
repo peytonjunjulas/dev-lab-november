@@ -1,10 +1,14 @@
 const express = require('express')
-const app = express()
 const path = require("node:path")
+
+const app = express()
+app.set("view engine", "ejs");
+
  
+let userNameExpress = "Joe";
+
 app.get('/', function (req, res) {
-  //res.send('Hello Node/Express/Heroku')
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.render('index', { userNameEjs: userNameExpress});
 })
  
 app.listen(process.env.PORT || 3000,
