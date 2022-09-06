@@ -1,1 +1,9 @@
-<h1> Hi there, <%=userNameEjs%> </h1>
+<h1> Hi there, <%=userName%> </h1>
+
+<h3> new thing </h3>
+
+<form method="post" action="/saveToNode">
+    <label>do that data</label>
+    <input type="text" name="userName">
+    <input type="submit" value="send to node via express">
+</form>
